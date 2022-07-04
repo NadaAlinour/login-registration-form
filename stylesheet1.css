@@ -1,0 +1,53 @@
+body {
+    background-color: #f8d7c1;
+    color: #225250;
+    
+}
+
+h1 {
+    text-align: left;
+    color: #225250;
+    background-color: #fff798;
+    font-size: 2.5em;
+}
+
+.error {
+    color: #e34c19;
+    font-size: 0.8em;
+}
+
+input[class="inputBox"], select {
+    width: 100%;
+    padding: 5px 5px;
+    margin: auto;
+    display: inline-block;
+    border: 0.5px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box;
+  }
+
+div.form {
+  width: 50%;
+  padding: 12px 20px;
+  margin: auto;
+  /*display: inline-block;*/
+  border: 1px solid #225250;
+  /*border-radius: 4px;*/
+  /*box-sizing: border-box;*/
+  
+}
+
+
+
+label {
+    display:block;
+    float: left;
+}
+
+.button {
+    width: 30%;
+    float: right;
+    background-color: #fff798;
+    color: #225250;
+}
+
