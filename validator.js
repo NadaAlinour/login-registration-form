@@ -16,6 +16,7 @@ function validateRegForm() {
     var password = document.regForm.password.value;
     var cpassword = document.regForm.cpassword.value;
 
+    //one error flag is enough
     var nameErr = emailErr = passwordErr = cpasswordErr = passwordMatchErr = true;
 
 
@@ -91,6 +92,7 @@ function validateFormLogin() {
     var email = document.loginForm.email.value;
     var password = document.loginForm.password.value;
 
+    //one error flag is enough
     var loginEmailErr = loginPassErr = true;
 
 
