@@ -4,9 +4,9 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "registration";
+$dbname = "registration2";
 
-//table name: userr
+//table name: user
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 
-$query = "SELECT * from userr where email='" . $_POST['email'] . "';";
+$query = "SELECT * from user where email='" . $_POST['email'] . "';";
 $resultA = $conn->query($query);
 
 if (mysqli_num_rows($resultA) > 0) {
@@ -29,7 +29,7 @@ if (mysqli_num_rows($resultA) > 0) {
     $rpasswordForEncrypt = $_POST["password"];
     $rencryptedPassword = md5($rpasswordForEncrypt);
     
-    $sql = "INSERT INTO userr (name, email, password)
+    $sql = "INSERT INTO user (name, email, password)
 VALUES ('" . $_POST["name"] . "', '" . $_POST["email"] . "', '" . $rencryptedPassword . "')";
 
     if ($conn->query($sql) === TRUE) {
