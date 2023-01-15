@@ -5,7 +5,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "registration";
+$dbname = "registration2";
 
 
 //table name: userr
@@ -18,14 +18,14 @@ if ($conn->connect_error) {
 }
 
 $query = "SELECT * from userr where email='" . $_POST['email'] . "';";
-$resultA = $conn->query($query);
+$resultA = $conn->query($query) or trigger_error("Query Failed! SQL: $query - Error: ".mysqli_error($conn), E_USER_ERROR);
 
 //encrypt input password again then compare with database password values
 $lpasswordForEncrypt = $_POST["password"];
 $lencryptedPassword = md5($lpasswordForEncrypt);
 
 $query = "SELECT * from userr where password='" . $lencryptedPassword . "';";
-$resultB = $conn->query($query);
+$resultB = $conn->query($query) or trigger_error("Query Failed! SQL: $query - Error: ".mysqli_error($conn), E_USER_ERROR);
 
 
 $loginFailErr = true;
